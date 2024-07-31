@@ -10,6 +10,7 @@ This microservice provides an HTTP API to manage user data. It supports adding, 
 ## Clone the Repository
 
 ```git clone https://github.com/John-AG/user-service```
+
 ```cd user-service```
 
 ## Build the Docker image
@@ -33,7 +34,7 @@ This microservice provides an HTTP API to manage user data. It supports adding, 
 
 The user data is stored using the following schema:
 
-json
+```json
 {
     "id": "d2a7924e-765f-4949-bc4c-219c956d0f8b",
     "first_name": "Alice",
@@ -44,7 +45,7 @@ json
     "country": "UK",
     "created_at": "2019-10-12T07:20:50.52Z",
     "updated_at": "2019-10-12T07:20:50.52Z"
-}
+}```
 
 ## API Endpoints
 
