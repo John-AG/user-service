@@ -9,8 +9,8 @@ This microservice provides an HTTP API to manage user data. It supports adding, 
 
 ## Clone the Repository
 
-```git clone <repository-url>
-cd user-service```
+```git clone https://github.com/John-AG/user-service```
+```cd user-service```
 
 ## Build the Docker image
 
@@ -33,7 +33,7 @@ cd user-service```
 
 The user data is stored using the following schema:
 
-```json
+json
 {
     "id": "d2a7924e-765f-4949-bc4c-219c956d0f8b",
     "first_name": "Alice",
@@ -45,26 +45,27 @@ The user data is stored using the following schema:
     "created_at": "2019-10-12T07:20:50.52Z",
     "updated_at": "2019-10-12T07:20:50.52Z"
 }
-```
 
 ## API Endpoints
 
-# Health Check
+## Health Check
 
 ```curl -X GET http://localhost:8080/health```
 
-# User Management
+## User Management
 
 - Add a New User.
 
-```curl -X POST http://localhost:8080/users -H "Content-Type: application/json" -d '{
+```
+curl -X POST http://localhost:8080/users -H "Content-Type: application/json" -d '{
     "first_name": "Alice",
     "last_name": "Smith",
     "nickname": "ASmith",
     "password": "supersecurepassword",
     "email": "alice@smith.com",
     "country": "UK"
-}'```
+}'
+```
 
 - List Users with Pagination.
 
@@ -76,14 +77,16 @@ The user data is stored using the following schema:
 
 - Update an existing user.
 
-```curl -X PUT http://localhost:8080/users/{id} -H "Content-Type: application/json" -d '{
+```
+curl -X PUT http://localhost:8080/users/{id} -H "Content-Type: application/json" -d '{
     "first_name": "AliceUpdated",
     "last_name": "Smith",
     "nickname": "AUpdated",
     "password": "newpassword",
     "email": "alice.updated@smith.com",
     "country": "US"
-}'```
+}'
+```
 
 - Delete a user.
 
