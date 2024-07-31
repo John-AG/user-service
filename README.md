@@ -9,17 +9,25 @@ This microservice provides an HTTP API to manage user data. It supports adding, 
 
 ## Clone the Repository
 
-```git clone https://github.com/John-AG/user-service```
+```
+git clone https://github.com/John-AG/user-service
+```
 
-```cd user-service```
+```
+cd user-service
+```
 
 ## Build the Docker image
 
-```docker build -t user-service .```
+```
+docker build -t user-service .
+```
 
 ## Run the application in Docker
 
-```docker run -p 8080:8080 user-service```
+```
+docker run -p 8080:8080 user-service
+```
 
 ## Features
 
@@ -34,7 +42,7 @@ This microservice provides an HTTP API to manage user data. It supports adding, 
 
 The user data is stored using the following schema:
 
-json
+```
 {
     "id": "d2a7924e-765f-4949-bc4c-219c956d0f8b",
     "first_name": "Alice",
@@ -46,12 +54,15 @@ json
     "created_at": "2019-10-12T07:20:50.52Z",
     "updated_at": "2019-10-12T07:20:50.52Z"
 }
+```
 
 ## API Endpoints
 
 ## Health Check
 
-```curl -X GET http://localhost:8080/health```
+```
+curl -X GET http://localhost:8080/health
+```
 
 ## User Management
 
@@ -68,13 +79,18 @@ curl -X POST http://localhost:8080/users -H "Content-Type: application/json" -d 
 }'
 ```
 
+
 - List Users with Pagination.
 
-```curl -X GET "http://localhost:8080/users?page=1&pageSize=10"```
+```
+curl -X GET "http://localhost:8080/users?page=1&pageSize=10"
+```
 
 - List Users with Filtering.
 
-```curl -X GET "http://localhost:8080/users?page=1&pageSize=10&country={country}"```
+```
+curl -X GET "http://localhost:8080/users?page=1&pageSize=10&country={country}"
+```
 
 - Update an existing user.
 
@@ -91,13 +107,17 @@ curl -X PUT http://localhost:8080/users/{id} -H "Content-Type: application/json"
 
 - Delete a user.
 
-```curl -X DELETE http://localhost:8080/users/{id}```
+```
+curl -X DELETE http://localhost:8080/users/{id}
+```
 
 ## Testing
 
 Unit tests are included in the main_test.go file. To run the tests, use the following command:
 
-```go test```
+```
+go test
+```
 
 ## Explanation of choices
 
