@@ -118,11 +118,11 @@ go test
 
 ## Explanation of choices
 
-# HTTP vs gRPC API
+### HTTP vs gRPC API
 
 I chose HTTP due to the simplicity of the application, the improved performance that gRPC can provide wasn’t necessary. I was also much more familiar with HTTP so in terms of required performance and time, it was what made the most sense for this task.
 
-# Docker vs Direct Execution
+### Docker vs Direct Execution
 
 There are many reasons why using Docker is superior to direct execution, such as advantages in terms of environment consistency, isolation, portability, scalability, and simplified dependency management. The key one for this task being environment consistency, ensuring that there are no issues for the user when running this API on their machine. Additionally it was mentioned that this was the preferred method on the task. 
 
